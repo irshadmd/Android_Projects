@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="175dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/rl4"
+            android:layout_marginTop="48dp"
+            >
+
+            <ImageView
+                android:id="@+id/imv1"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/youtube"/>
+
+            <Button
+                android:id="@+id/btnyou"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_below="@+id/imv1"
+                android:layout_marginTop="14dp"
+                android:text="Download Youtube Videos" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="175dp"
+            android:layout_height="200dp"
+            android:layout_alignStart="@+id/rl5"
+            android:layout_alignTop="@+id/rl2"
+            >
+
+            <ImageView
+                android:id="@+id/imv2"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/cric"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Cricet Updates" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl4"
+            android:layout_width="175dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="11dp"
+            >
+
+            <ImageView
+                android:id="@+id/imv3"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/java"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="1dp"
+                android:text="Tutorials" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_width="175dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="300dp"
+            >
+
+            <ImageView
+                android:id="@+id/imv4"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/news"/>
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="All newspapers" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

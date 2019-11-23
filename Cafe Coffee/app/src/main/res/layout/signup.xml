@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/coffee"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signup"
+                android:layout_marginTop="20dp"
+                android:textSize="50dp"
+                android:fontFamily="cursive"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/white"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                >
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/ic_username"
+                    android:ems="12"
+                    android:hint="First Name"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/ic_username"
+                    android:layout_marginLeft="25dp"
+                    android:ems="12"
+                    android:hint="Last Name"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="255dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:ems="12"
+                    android:hint="Password"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:ems="12"
+                    android:layout_marginLeft="25dp"
+                    android:hint="Confirm Password"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/ic_mail_black_24dp"
+                    android:ems="12"
+                    android:layout_marginLeft="25dp"
+                    android:hint="Email"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:ems="12"
+                    android:hint="Mobile"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edittext_dob"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:hint="Date Of Birth"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:clickable="true"
+                    android:background="@drawable/translucent_background"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:ems="12"
+                    android:hint="Address"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText8"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:ems="12"
+                    android:layout_marginLeft="25dp"
+                    android:hint="City"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText9"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:ems="12"
+                    android:hint="State"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText10"
+                    android:layout_width="255dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:drawableLeft="@drawable/ic_username"
+                    android:ems="12"
+                    android:hint="Country"
+                    android:background="@drawable/translucent_background"/>
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/round_shape"
+                android:text="Submit"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
