@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="241dp"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="126dp"
+        app:srcCompat="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="208dp"
+        android:fontFamily="monospace"
+        android:shadowColor="@color/colorAccent"
+        android:text="AMS"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp"
+        android:fontFamily="serif-monospace"
+        android:text="All in your palm!"
+        android:textAlignment="center"
+        android:textColor="#354B58"
+        android:textSize="14sp" />
+</RelativeLayout>

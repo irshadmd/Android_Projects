@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".TeacherActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="75dp"
+        android:layout_height="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        app:srcCompat="@mipmap/logo2" />
+
+    <Button
+        android:id="@+id/lbtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="149dp"
+        android:background="@null"
+        android:onClick="fragmentSelect"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="Log In" />
+
+    <Button
+        android:id="@+id/sbtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/lbtn"
+        android:layout_marginEnd="47dp"
+        android:background="@null"
+        android:onClick="fragmentSelect"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="Sign Up" />
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="324dp"
+        android:layout_height="282dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:orientation="horizontal">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

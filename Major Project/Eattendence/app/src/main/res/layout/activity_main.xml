@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/loginbt"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Login   "
+        android:textColor="#fff"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="-40dp"
+        android:textAlignment="textEnd"
+        android:textSize="27dp"/>
+
+    <Button
+        android:id="@+id/signupbt"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Sign Up "
+        android:textColor="#fff"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="-40dp"
+        android:textAlignment="textEnd"
+        android:textSize="27dp"/>
+
+    <FrameLayout
+        android:layout_width="280dp"
+        android:layout_height="650dp"
+        android:id="@+id/frame"
+        android:backgroundTint="#000"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="125dp"
+        >
+    </FrameLayout>
+</RelativeLayout>
