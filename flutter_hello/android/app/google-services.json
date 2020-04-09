@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "874424456260",
+    "firebase_url": "https://flutterhello-5bb7c.firebaseio.com",
+    "project_id": "flutterhello-5bb7c",
+    "storage_bucket": "flutterhello-5bb7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874424456260:android:cc238a728d07ba4d0a9811",
+        "android_client_info": {
+          "package_name": "com.example.flutterhello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874424456260-kbrmb02ivuol76qoqu4a49ge9lkadkea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4pVqcUzyiQFlY6N-B23I9RELop6oQn70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874424456260-kbrmb02ivuol76qoqu4a49ge9lkadkea.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
