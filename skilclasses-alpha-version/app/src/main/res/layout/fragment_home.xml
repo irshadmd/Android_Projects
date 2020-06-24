@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:layout_marginBottom="50dp"
+    android:background="@color/recieved"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/category_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/group_choices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    android:textAlignment="center">
+
+                    <RadioButton
+                        android:id="@+id/choice_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_layout_background"
+                        android:button="@null"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="All"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <RadioButton
+                        android:id="@+id/choice_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_layout_background"
+                        android:button="@null"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Maths"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <RadioButton
+                        android:id="@+id/choice_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_layout_background"
+                        android:button="@null"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Physics"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <RadioButton
+                        android:id="@+id/choice_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_layout_background"
+                        android:button="@null"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Chemistry"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+                        />
+
+                    <RadioButton
+                        android:id="@+id/choice_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_layout_background"
+                        android:button="@null"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Biology"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+                        />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

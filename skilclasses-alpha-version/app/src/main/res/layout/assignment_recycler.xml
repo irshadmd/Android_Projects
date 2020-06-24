@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:alpha="0.9"
+    android:background="#fff"
+    android:elevation="5dp"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/open_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="?attr/actionBarItemBackground"
+        android:padding="10dp">
+        <!--  <TextView
+              android:id="@+id/aid"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Name of the Course"
+              android:layout_marginTop="8dp" />-->
+        <ImageView
+            android:id="@+id/assignmentpdf"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:src="@drawable/assignment_icon"></ImageView>
+
+        <TextView
+            android:id="@+id/aname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/assignmentpdf"
+            android:text="Name of the Course"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textFontWeight="900" />
+
+        <TextView
+            android:id="@+id/aofclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aname"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/assignmentpdf"
+            android:text="Subject |"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        <!-- <TextView
+             android:id="@+id/adate"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="9th class |"
+             android:layout_toRightOf="@+id/aofclass"
+             android:layout_marginTop="8dp"
+             />-->
+        <!--        <TextView
+                    android:id="@+id/adesp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Describe the following into words"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/aofclass"/>
+
+                <TextView
+                    android:id="@+id/asub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/adate"/>
+                <TextView
+                    android:id="@+id/apath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/asub"/>-->
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/home"
+        android:icon="@drawable/home_icon"
+        android:title="Home"></item>
+    <item
+        android:id="@id/assignment"
+        android:icon="@drawable/assignment_icon"
+        android:title="Assignments"></item>
+    <item
+        android:id="@id/quiz"
+        android:icon="@drawable/quiz_icon"
+        android:title="Quiz"></item>
+    <item
+        android:id="@id/doubt"
+        android:icon="@drawable/doubt_icon"
+        android:title="Doubts"></item>
+</menu>

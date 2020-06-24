@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1052499677839",
+    "firebase_url": "https://techclub-e48ac.firebaseio.com",
+    "project_id": "techclub-e48ac",
+    "storage_bucket": "techclub-e48ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052499677839:android:ee8d78309680e0999c16fa",
+        "android_client_info": {
+          "package_name": "com.example.techclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052499677839-jmbe3vs6b3bup0ln82evnue1vle2n8nm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.techclub",
+            "certificate_hash": "515e03dc82b010cd22e16cf03b2df716a063a617"
+          }
+        },
+        {
+          "client_id": "1052499677839-fll8sf6suk9s56aib1o0tb1kda7fa7nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUKlqFrwjl7O73-ym6CljBtLUPc3ya9Rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052499677839-fll8sf6suk9s56aib1o0tb1kda7fa7nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="300dp"
+    android:padding="10dp"
+    android:id="@+id/custom_progress_dialog"
+    android:background="@drawable/button"
+    android:backgroundTint="@color/black"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registering"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="Registering"
+        android:textColor="@color/white"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/registering"
+        android:id="@+id/registerProgress"
+        android:visibility="visible"
+        android:indeterminateTint="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

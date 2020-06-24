@@ -1,0 +1,2 @@
+rootProject.name='TechCLUB'
+include ':app'
