@@ -6,31 +6,8 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8030e38a-f7c6-4cad-8c47-34624f45ee7d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../FluxStore/source/.idea/source.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EAttendance/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EAttendance/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../EAttendance/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EAttendance/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EAttendance/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EAttendance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EAttendance/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8030e38a-f7c6-4cad-8c47-34624f45ee7d" name="Default" comment="Checked major project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eattendence.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Eattendence.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TechCLUB/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../TechCLUB/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TechCLUB/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../TechCLUB/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,24 +145,40 @@
       <option name="presentableId" value="Default" />
       <updated>1568308932436</updated>
     </task>
+    <task id="LOCAL-00001" summary="Checked major project">
+      <created>1595251103758</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595251103758</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Checked major project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checked major project" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1595251061233">
+    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1595251100275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595251061233" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1595251061233">
+    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595251100275" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1595251136461">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595251061233" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1595251061232">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595251136461" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1595251136460">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595251061232" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1595251061233">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595251136460" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1595251136460">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595251061233" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595251136460" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1595251136460">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595251136460" />
   </component>
 </project>
