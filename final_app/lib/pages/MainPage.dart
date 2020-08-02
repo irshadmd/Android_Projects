@@ -9,6 +9,7 @@ import 'package:final_app/Helper/SubCategoriesApi.dart';
 import 'package:final_app/Helper/TrendingNow.dart';
 import 'package:final_app/Helper/TrendingNowApi.dart';
 import 'package:final_app/pages/HomePage.dart';
+import 'package:final_app/pages/ProfilePage.dart';
 import 'package:flutter/services.dart';
 import '../Preferences.dart';
 import 'package:final_app/api/Categories.dart';
@@ -52,9 +53,7 @@ class _MainPageState extends State<MainPage> {
     Center(
       child: Text("TV"),
     ),
-    Center(
-      child: Text("Profile"),
-    ), //new Login()
+    new ProfilePage(), //new Login()
   ];
 
   @override

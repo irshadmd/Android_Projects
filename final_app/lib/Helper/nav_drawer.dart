@@ -61,11 +61,11 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     BorderRadius.only(bottomLeft: Radius.circular(35)),
               ),
               accountName: Text(
-                this.user.name,
+                ""+this.user.name,
                 style: Theme.of(context).textTheme.title,
               ),
               accountEmail: Text(
-                this.user.email,
+                ""+this.user.email,
                 style: Theme.of(context).textTheme.caption,
               ),
             ),

@@ -16,7 +16,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 5,
+      seconds: 6,
       photoSize: 150,
       image: Image.asset('assets/freshodaily.png'),
       navigateAfterSeconds: check_if_already_login(context),
