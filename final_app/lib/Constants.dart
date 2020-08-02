@@ -39,7 +39,7 @@ final kHeadingHard = GoogleFonts.raleway(
 final kLoginStyle = GoogleFonts.raleway(
     color: Colors.black,
     fontWeight: FontWeight.w600,
-    fontSize: 25,
+    fontSize: 30,
 );
 
 final kButtonStyle = GoogleFonts.raleway(
