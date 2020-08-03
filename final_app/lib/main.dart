@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFDE3C26)
       ),
       debugShowCheckedModeBanner: false,
-      title: "Chicken App",
+      title: "Fresho Daily",
       home: SplashScreenPage(),
     );
   }
