@@ -1,15 +1,9 @@
-import 'package:final_app/Helper/BlockButton.dart';
-import 'package:final_app/Helper/FoodCategories.dart';
-import 'package:final_app/Helper/SubCategoriesApi.dart';
-import 'package:final_app/Helper/TrendingNowApi.dart';
 import 'package:final_app/api/loginApi.dart';
 import 'package:final_app/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 
-import '../Constants.dart';
 import '../Preferences.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -20,6 +14,8 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   ProgressDialog pr;
   User user = new User();
+  String name = "";
+  String email = "";
 
   @override
   initState() {
@@ -31,6 +27,8 @@ class _ProfilePageState extends State<ProfilePage> {
     await Preferences.getUser().then((value) {
       setState(() {
         user = value;
+        name = user.name;
+        email = user.email;
       });
     });
   }
@@ -47,7 +45,7 @@ class _ProfilePageState extends State<ProfilePage> {
     pr.style(
       backgroundColor: Colors.transparent,
     );
-    if (this.user.name != '--') {
+    if (name != '--') {
       return Scaffold(
         backgroundColor: Colors.white70,
         body: Padding(
@@ -67,7 +65,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Center(
                 child: Text(
-                  "" + this.user.name,
+                  name,
                   style: TextStyle(
                     color: Colors.redAccent,
                     fontSize: 28.0,
@@ -81,7 +79,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Center(
                 child: Text(
-                  "" + this.user.email,
+                  email,
                   style: TextStyle(
                     color: Colors.redAccent,
                     fontSize: 20.0,
@@ -121,14 +119,20 @@ class _ProfilePageState extends State<ProfilePage> {
       return Scaffold(
         backgroundColor: Colors.white70,
         body: Center(
-          child: FlatButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed('/LoginPage');
-            },
-            color: Colors.redAccent,
-            child: Text(
-              'Login',
-              style: TextStyle(color: Colors.black87, fontSize: 30),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: RaisedButton.icon(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/LoginPage');
+              },
+
+              color: Colors.blueAccent,
+              icon: Icon(
+                Icons.lock_open,
+                color: Colors.white70,
+              ),
+              label:
+              Text('Login', style: TextStyle(color: Colors.white70)),
             ),
           ),
         ),

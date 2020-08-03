@@ -22,6 +22,8 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   ProgressDialog pr;
 
   User user = new User();
+  String name = "";
+  String email = "";
 
   @override
   initState() {
@@ -34,6 +36,8 @@ class _DrawerWidgetState extends State<DrawerWidget> {
     await Preferences.getUser().then((value) {
       setState(() {
         user = value;
+        name = user.name;
+        email = user.email;
       });
     });
   }
@@ -61,11 +65,11 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     BorderRadius.only(bottomLeft: Radius.circular(35)),
               ),
               accountName: Text(
-                ""+this.user.name,
+                name,
                 style: Theme.of(context).textTheme.title,
               ),
               accountEmail: Text(
-                ""+this.user.email,
+                email,
                 style: Theme.of(context).textTheme.caption,
               ),
             ),
