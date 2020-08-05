@@ -119,21 +119,30 @@ class _ProfilePageState extends State<ProfilePage> {
       return Scaffold(
         backgroundColor: Colors.white70,
         body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: RaisedButton.icon(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/LoginPage');
-              },
-
-              color: Colors.blueAccent,
-              icon: Icon(
-                Icons.lock_open,
-                color: Colors.white70,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image(
+                image: AssetImage('assets/notfound.png'),
               ),
-              label:
-              Text('Login', style: TextStyle(color: Colors.white70)),
-            ),
+              ButtonTheme(
+                minWidth: 250,
+                height: 50,
+                child: RaisedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/LoginPage');
+                  },
+
+                  color: Colors.blueAccent,
+                  icon: Icon(
+                    Icons.lock_open,
+                    color: Colors.white70,
+                  ),
+                  label:
+                  Text('Login', style: TextStyle(color: Colors.white70)),
+                ),
+              ),
+            ],
           ),
         ),
       );
@@ -156,6 +165,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   pr.show();
                   Login.LogoutUser().then((response) {
                     pr.hide();
+                    Preferences.setUser(
+                      "--",
+                      "--",
+                      "--",
+                    );
                     Navigator.pushNamed(context, '/LoginPage');
                   });
                 },

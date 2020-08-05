@@ -8,7 +8,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 class PlantDetail extends StatefulWidget {
   final Detail details;
+
   const PlantDetail({Key key, this.details}) : super(key: key);
+
   @override
   _PlantDetailState createState() => _PlantDetailState();
 }
@@ -17,35 +19,37 @@ class _PlantDetailState extends State<PlantDetail> {
   final globalKey = GlobalKey<ScaffoldState>();
   String message = "";
   bool _emptyCart = false;
-  
+
   List<CartData> productApi = new List<CartData>();
-   void getCouponList() async{
-     if(mounted){
-    await CartApi.cartList().then((value) {
-      if(value is List){
-        setState(() {
-        productApi=value;
-        print("=+++++++++++++++++++++++++++======");
-        print(productApi.length);
-        print("=========== Product Api=========");
-        print(productApi.toString());
-        if (value.length == 0) {
-          setState(() {
-            this._emptyCart = true;
-          });
-        } else {
+
+  void getCouponList() async {
+    if (mounted) {
+      await CartApi.cartList().then((value) {
+        if (value is List) {
           setState(() {
             productApi = value;
+            print("=+++++++++++++++++++++++++++======");
+            print(productApi.length);
+            print("=========== Product Api=========");
+            print(productApi.toString());
+            if (value.length == 0) {
+              setState(() {
+                this._emptyCart = true;
+              });
+            } else {
+              setState(() {
+                productApi = value;
+              });
+            }
+          });
+        } else if (value is String) {
+          setState(() {
+            message = value;
+            print(message);
           });
         }
       });
-      } else if(value is String){
-        setState(() {
-          message = value;
-          print(message);
-        });
-      }
-    });}
+    }
   }
 
   @override
@@ -59,7 +63,7 @@ class _PlantDetailState extends State<PlantDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: globalKey,
-          body: Material(
+      body: Material(
         child: ListView(
           children: <Widget>[
             Stack(
@@ -67,22 +71,21 @@ class _PlantDetailState extends State<PlantDetail> {
                 Container(
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(color: Theme.of(context).accentColor),
+                  decoration:
+                      BoxDecoration(color: Theme.of(context).accentColor),
                 ),
                 Positioned(
                   top: MediaQuery.of(context).size.height / 2,
                   child: Container(
                     height: MediaQuery.of(context).size.height / 2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0),
-                    ),
-                    color: Colors.white
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          topRight: Radius.circular(20.0),
+                        ),
+                        color: Colors.white),
                   ),
-                  ),
-
                 ),
                 Align(
                   alignment: Alignment.topLeft,
@@ -95,17 +98,17 @@ class _PlantDetailState extends State<PlantDetail> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 10.0, left: MediaQuery.of(context).size.width - 60.0
-                  ),
+                      top: 10.0,
+                      left: MediaQuery.of(context).size.width - 60.0),
                   child: FloatingActionButton(
                     onPressed: () {
-                       Navigator.of(context).pushNamed('/Cart');
+                      Navigator.of(context).pushNamed('/Cart');
                     },
-                    backgroundColor: Colors.black,
+                    backgroundColor: Colors.white,
                     mini: true,
                     elevation: 0.0,
                     child: Icon(Icons.shopping_cart,
-                        color: Colors.white, size: 15.0),
+                        color: Colors.redAccent, size: 15.0),
                   ),
                 ),
                 Padding(
@@ -139,7 +142,7 @@ class _PlantDetailState extends State<PlantDetail> {
                             color: Colors.black),
                       ),
                       Text(
-                        '\$'+this.widget.details.rates,
+                        '\$' + this.widget.details.rates,
                         style: GoogleFonts.montserrat(
                             // fontFamily: 'Montserrat',
                             fontSize: 25.0,
@@ -162,7 +165,6 @@ class _PlantDetailState extends State<PlantDetail> {
                             fontWeight: FontWeight.w300,
                             color: Colors.white),
                       ),
-                      
                     ],
                   ),
                 ),
@@ -170,7 +172,8 @@ class _PlantDetailState extends State<PlantDetail> {
                   top: (MediaQuery.of(context).size.height / 2) - 185.0,
                   left: (MediaQuery.of(context).size.width / 2) - 80.0,
                   child: Image(
-                    image: NetworkImage("https://freshodaily.com/${this.widget.details.image}"),
+                    image: NetworkImage(
+                        "https://freshodaily.com/${this.widget.details.image}"),
                     fit: BoxFit.cover,
                     height: 250.0,
                   ),
@@ -186,9 +189,7 @@ class _PlantDetailState extends State<PlantDetail> {
                         Text(
                           'Details',
                           style: GoogleFonts.montserrat(
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.w600
-                          ),
+                              fontSize: 25.0, fontWeight: FontWeight.w600),
                         ),
                         SizedBox(height: 12.0),
                         Text(
@@ -200,36 +201,62 @@ class _PlantDetailState extends State<PlantDetail> {
                         SizedBox(height: 30.0),
                         Center(
                           child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(100)),
-                      ),
-                      child: FlatButton(
-                          onPressed: (){
-                            CartApi.addToCart(this.widget.details.id.toString()).then(
-                              (value){
-                                if(value=="Item Added to Cart"){
-                                  Fluttertoast.showToast(
-                                    msg: "Item Added to Cart",
-                              );
-                                }
-                                else if(value=="Item already in cart"){
-                                  Fluttertoast.showToast(
-                                    msg: "Item already in cart",
-                                  );
-                                }
-                              }
-                            );
-                          },
-                          padding: EdgeInsets.symmetric(horizontal: 66, vertical: 14),
-                          color: Theme.of(context).accentColor,
-                          shape: StadiumBorder(),
-                          child: Text("Add To Cart",style: kButtonStyle,),
-                      ),
-                    ),
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(100)),
+                            ),
+                            child: FlatButton(
+                              onPressed: () {
+                                CartApi.addToCart(
+                                        this.widget.details.id.toString())
+                                    .then((value) {
+                                  if (value == "Item Added to Cart") {
+                                    globalKey.currentState.showSnackBar(
+                                        SnackBar(
+                                            backgroundColor: Theme.of(context)
+                                                .focusColor
+                                                .withOpacity(0.8),
+                                            content: Text(
+                                              "Item Added to Cart",
+                                              style: TextStyle(
+                                                color: Colors.white70,
+                                                fontSize: 10,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            )));
+                                  } else if (value == "Item already in cart") {
+                                    globalKey.currentState.showSnackBar(
+                                        SnackBar(
+                                            backgroundColor: Theme.of(context)
+                                                .focusColor
+                                                .withOpacity(0.8),
+                                            content: Text(
+                                              "Item already in cart",
+                                              style: TextStyle(
+                                                color: Colors.white70,
+                                                fontSize: 10,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            )));
+                                  }
+                                });
+                                print("Helooooooooooooooooooooooooooooo");
+                                print(this.widget.details.id.toString());
+                                print("Helooooooooooooooooooooooooooooo");
+                              },
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 66, vertical: 14),
+                              color: Theme.of(context).accentColor,
+                              shape: StadiumBorder(),
+                              child: Text(
+                                "Add To Cart",
+                                style: kButtonStyle,
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     )),
-                   
               ],
             )
           ],

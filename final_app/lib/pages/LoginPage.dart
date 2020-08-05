@@ -64,15 +64,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Positioned(
-              top: config.App(context).appHeight(29.5) - 130,
-              child: Container(
-                width: config.App(context).appWidth(84),
-                height: config.App(context).appHeight(29.5),
-                child: Text('Login!', style: kLoginStyle),
-              ),
-            ),
-            Positioned(
-              top: config.App(context).appHeight(29.5) - 80,
+              top: config.App(context).appHeight(29.5) - 135,
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.black87.withOpacity(0.3),

@@ -44,6 +44,8 @@ class CategoriesList {
       });
     var responseJson = jsonDecode(response.body);
     var data = responseJson["data"];
+    print("https://freshodaily.com/api/sub-categories/$id");
+    print(responseJson);
     print(data);
     int totalCoupons = data.length;
     List<CategoriesApi> CategoriesApiDetail = List<CategoriesApi>();

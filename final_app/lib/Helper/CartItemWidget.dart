@@ -116,8 +116,8 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                 ),
                 IconButton(icon: Icon(Icons.delete,color: Colors.red,), onPressed: (){
                   setState(() {
-                    Navigator.of(context).pushNamed('/MainPage');
                     CartApi.deleteCartItemById(widget.cartData.id.toString()).then((value) => print(value));
+                    Navigator.of(context).pushNamed('/Cart');
                   });
                 }),
                 SizedBox(width: 8),

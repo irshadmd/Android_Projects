@@ -7,8 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:final_app/api/Categories.dart';
+
 class CategoryPage extends StatefulWidget {
   final id;
+
   const CategoryPage({Key key, this.id}) : super(key: key);
 
   @override
@@ -16,17 +18,7 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
-
   List<CategoriesApi> productApi = new List<CategoriesApi>();
-  void getCouponList() async{
-    await CategoriesList.subCategoriesById(this.widget.id.toString()).then((value) {
-      setState(() {
-        productApi=value;
-        print("=+++++++++++++++++++++++++++======");
-        print(productApi.length);
-      });
-    });
-  }
 
   @override
   void initState() {
@@ -34,17 +26,31 @@ class _CategoryPageState extends State<CategoryPage> {
     print("====Product Listing==============");
     print(this.widget.id.toString());
     getCouponList();
+    print("Get coupon list");
   }
+
+  void getCouponList() async {
+    await CategoriesList.subCategoriesById(this.widget.id.toString())
+        .then((value) {
+      setState(() {
+        print(value);
+        productApi = value;
+        print("product api lengthhhhhhhhhhhh");
+        print(productApi.length);
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: DrawerWidget(),
       appBar: AppBar(
         elevation: 0,
-        title: Text("Categories",style: GoogleFonts.raleway(
-          color: Colors.white,
-          fontSize: 20
-        ),),
+        title: Text(
+          "Categories",
+          style: GoogleFonts.raleway(color: Colors.white, fontSize: 20),
+        ),
         actions: <Widget>[
           Container(
             padding: EdgeInsets.symmetric(horizontal: 25),
@@ -58,17 +64,15 @@ class _CategoryPageState extends State<CategoryPage> {
         primary: false,
         crossAxisSpacing: 40,
         mainAxisSpacing: 20,
-        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         crossAxisCount:
-        MediaQuery.of(context).orientation == Orientation.portrait
-            ? 2
-            : 4,
+            MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 4,
         children: List.generate(productApi.length, (index) {
           return SubCategoriesBox(
             categoriesApi: productApi[index],
           );
         }),
       ),
-     );
+    );
   }
 }

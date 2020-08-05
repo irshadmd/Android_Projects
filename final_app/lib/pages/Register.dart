@@ -56,15 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
           Positioned(
-            top: config.App(context).appHeight(29.5) - 130,
-            child: Container(
-              width: config.App(context).appWidth(84),
-              height: config.App(context).appHeight(29.5),
-              child: Text('Let\'s Start!', style: kLoginStyle),
-            ),
-          ),
-          Positioned(
-            top: config.App(context).appHeight(29.5) - 100,
+            top: config.App(context).appHeight(29.5) - 150,
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.black87.withOpacity(0.3),

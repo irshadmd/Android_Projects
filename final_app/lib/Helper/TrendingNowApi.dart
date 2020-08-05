@@ -10,14 +10,16 @@ class TrendingNowApi extends StatefulWidget {
 
 class _TrendingNowApiState extends State<TrendingNowApi> {
   List<Data> productApi = new List<Data>();
-  void getCouponList() async{
+
+  void getCouponList() async {
     await CategoriesList.TrendingNowListing().then((value) {
-      if(mounted){
-      setState(() {
-        productApi=value;
-        print("=+++++++++++++++++++++++++++======");
-        print(productApi.length);
-      });}
+      if (mounted) {
+        setState(() {
+          productApi = value;
+          print("=+++++++++++++++++++++++++++======");
+          print(productApi.length);
+        });
+      }
     });
   }
 
@@ -27,23 +29,25 @@ class _TrendingNowApiState extends State<TrendingNowApi> {
     print("====Trending Now==============");
     getCouponList();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      height: 250,
-    margin: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-    child: ListView.builder(
-      itemCount:productApi.length,
-      itemBuilder: (context, index) {
-        return TrendingNow(
-          title: productApi[index].productName,
-          qty: productApi[index].measurementUnit,
-          pices: productApi[index].id.toString(),
-          mrp: productApi[index].rates.toString(),
-          imgPath: "https://freshodaily.com/${productApi[index].image.toString()}",
-        );
-      },
-      scrollDirection: Axis.horizontal,
-    ));
+    return Container(
+        height: 250,
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: ListView.builder(
+          itemCount: productApi.length,
+          itemBuilder: (context, index) {
+            return TrendingNow(
+              title: productApi[index].productName,
+              qty: productApi[index].measurementUnit,
+              pices: productApi[index].id.toString(),
+              mrp: productApi[index].rates.toString(),
+              imgPath:
+                  "https://freshodaily.com/${productApi[index].image.toString()}",
+            );
+          },
+          scrollDirection: Axis.horizontal,
+        ));
   }
 }

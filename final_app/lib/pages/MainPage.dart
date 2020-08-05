@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
         title: Text("Home"),
         backgroundColor: Colors.redAccent),
     BottomNavigationBarItem(
-        icon: Icon(Icons.tv), title: Text("Tv"), backgroundColor: Colors.blue),
+        icon: Icon(Icons.shop), title: Text("Shop"), backgroundColor: Colors.redAccent),
     BottomNavigationBarItem(
         icon: Icon(Icons.person),
         title: Text("Profile"),
@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage> {
   final tabs = [
     new HomePage(),
     Center(
-      child: Text("TV"),
+      child: Text("SHOP"),
     ),
     new ProfilePage(), //new Login()
   ];
@@ -111,14 +111,14 @@ class _MainPageState extends State<MainPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.white,
                   child: GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed('/Cart');
                       },
                       child: Icon(
                         Icons.shopping_cart,
-                        color: Colors.black,
+                        color: Colors.redAccent,
                       )),
                 ),
               )

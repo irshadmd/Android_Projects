@@ -23,14 +23,13 @@ class _HomePageState extends State<HomePage> {
             height: 40,
             width: double.infinity,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.grey[300],
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 7,
-                  )
-                ]),
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
+              border: Border.all(
+                color: Colors.black,
+                width: 1,
+              ),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -39,19 +38,17 @@ class _HomePageState extends State<HomePage> {
                   width: 20,
                 ),
                 Text(
-                  "SEARCH FOR CATEGORIES",
+                  "Search for products...",
                   style: KsearchBar,
                 )
               ],
             ),
           ),
-          ProductCategories(),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             padding: EdgeInsets.symmetric(horizontal: 20),
             height: 150,
             decoration: BoxDecoration(
-                color: Colors.pink[100],
                 borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
                     image: AssetImage('assets/ezgif.com-video-to-gif.gif'),
@@ -78,7 +75,7 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 children: <Widget>[
                   Text(
-                    "Sub-Categories",
+                    "Sub Categories",
                     style: GoogleFonts.roboto(
                         color: Colors.red,
                         fontWeight: FontWeight.bold,

@@ -60,17 +60,22 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           GestureDetector(
             child: UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.white30,
                 borderRadius:
                     BorderRadius.only(bottomLeft: Radius.circular(35)),
+              ),
+              currentAccountPicture:  CircleAvatar(
+                radius: 65,
+                backgroundColor: Colors.black87,
+                child: CircleAvatar(
+                  radius: 63,
+                  backgroundImage: AssetImage('assets/profile.jpg'),
+                  backgroundColor: Colors.white,
+                ),
               ),
               accountName: Text(
                 name,
                 style: Theme.of(context).textTheme.title,
-              ),
-              accountEmail: Text(
-                email,
-                style: Theme.of(context).textTheme.caption,
               ),
             ),
           ),
@@ -121,19 +126,19 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               style: Theme.of(context).textTheme.subhead,
             ),
           ),
-          ListTile(
-            onTap: () {
-              CustomAlertDialog(context);
-            },
-            leading: Icon(
-              Icons.exit_to_app,
-              color: Theme.of(context).focusColor.withOpacity(1),
-            ),
-            title: Text(
-              "Log out",
-              style: Theme.of(context).textTheme.subhead,
-            ),
-          ),
+//          ListTile(
+//            onTap: () {
+//              CustomAlertDialog(context);
+//            },
+//            leading: Icon(
+//              Icons.exit_to_app,
+//              color: Theme.of(context).focusColor.withOpacity(1),
+//            ),
+//            title: Text(
+//              "Log out",
+//              style: Theme.of(context).textTheme.subhead,
+//            ),
+//          ),
           ListTile(
             dense: true,
             title: Text(

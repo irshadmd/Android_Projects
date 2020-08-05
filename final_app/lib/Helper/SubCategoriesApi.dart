@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import 'SubCategories.dart';
 
-
 class SubCategoriesApi extends StatefulWidget {
   @override
   _SubCategoriesApiState createState() => _SubCategoriesApiState();
@@ -12,15 +11,16 @@ class SubCategoriesApi extends StatefulWidget {
 
 class _SubCategoriesApiState extends State<SubCategoriesApi> {
   List<CategoriesApi> productApi = new List<CategoriesApi>();
-  void getCouponList() async{
+
+  void getCouponList() async {
     await CategoriesList.subCategoriesListing().then((value) {
-     if(mounted){
+      if (mounted) {
         setState(() {
-        productApi=value;
-        print("=+++++++++++++++++++++++++++======");
-        print(productApi.length);
-      });
-     }
+          productApi = value;
+          print("=+++++++++++++++++++++++++++======");
+          print(productApi.length);
+        });
+      }
     });
   }
 
@@ -30,29 +30,26 @@ class _SubCategoriesApiState extends State<SubCategoriesApi> {
     print("====Product Listing==============");
     getCouponList();
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
         height: 160,
         decoration: BoxDecoration(
             color: Colors.white,
-            boxShadow: [BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0, 4),
-              // spreadRadius: 1
-            )],
-            borderRadius: BorderRadius.circular(15)
-        ),
-        padding: EdgeInsets.symmetric(vertical: 15,horizontal: 10),
-        margin: EdgeInsets.symmetric(vertical: 15,horizontal: 10),
+            border: Border.all(color: Colors.white70,width: 0.5),
+            borderRadius: BorderRadius.circular(15)),
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+        margin: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         child: ListView.builder(
-          itemCount:productApi.length,
+          itemCount: productApi.length,
           itemBuilder: (context, index) {
             return SubCategories(
               id: productApi[index].id.toString(),
               title: productApi[index].name.toString(),
               TextColor: 0xffcc0000,
-              imagePath: "https://freshodaily.com/${productApi[index].image.toString()}",
+              imagePath:
+                  "https://freshodaily.com/${productApi[index].image.toString()}",
             );
           },
           scrollDirection: Axis.horizontal,

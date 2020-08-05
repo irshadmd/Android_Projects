@@ -10,7 +10,10 @@ class SubCategories extends StatefulWidget {
   final String title;
   final String imagePath;
   final int TextColor;
-  const SubCategories({Key key,this.id,this.imagePath, this.title,this.TextColor}) : super(key: key);
+
+  const SubCategories(
+      {Key key, this.id, this.imagePath, this.title, this.TextColor})
+      : super(key: key);
 
   @override
   _SubCategoriesState createState() => _SubCategoriesState();
@@ -18,15 +21,16 @@ class SubCategories extends StatefulWidget {
 
 class _SubCategoriesState extends State<SubCategories> {
   Detail details;
-  void getCouponList() async{
+
+  void getCouponList() async {
     await ProductDetil.getProductbyId(this.widget.id.toString()).then((value) {
-     if(mounted){
+      if (mounted) {
         setState(() {
-        details=value;
-        print("=+++++++Details ++++++======");
-        print(details.toString());
-      });
-     }
+          details = value;
+          print("=+++++++Details ++++++======");
+          print(details.toString());
+        });
+      }
     });
   }
 
@@ -36,13 +40,17 @@ class _SubCategoriesState extends State<SubCategories> {
     print("====Product Listing==============");
     getCouponList();
   }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => PlantDetail(
-          details: details,
-        )));
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => PlantDetail(
+                      details: details,
+                    )));
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 5),
@@ -54,12 +62,27 @@ class _SubCategoriesState extends State<SubCategories> {
               backgroundImage: NetworkImage('${widget.imagePath}'),
               radius: 35,
             ),
-            SizedBox(height: 10,),
-            Text("${widget.title}",style: GoogleFonts.raleway(
-                color: Color(widget.TextColor),
-                fontWeight: FontWeight.w600,
-                fontSize: 20
-            ),)
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              padding: EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Text(
+                "${widget.title}",
+                style: GoogleFonts.raleway(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                  backgroundColor: Colors.redAccent,
+
+                ),
+              ),
+            )
           ],
         ),
       ),
