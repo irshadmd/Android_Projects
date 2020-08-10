@@ -8,6 +8,7 @@ import 'package:final_app/Helper/SubCategories.dart';
 import 'package:final_app/Helper/SubCategoriesApi.dart';
 import 'package:final_app/Helper/TrendingNow.dart';
 import 'package:final_app/Helper/TrendingNowApi.dart';
+import 'package:final_app/api/cart.dart';
 import 'package:final_app/pages/HomePage.dart';
 import 'package:final_app/pages/ProfilePage.dart';
 import 'package:flutter/services.dart';
@@ -17,6 +18,7 @@ import 'package:final_app/api/loginApi.dart';
 import 'package:final_app/models/Categories.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:badges/badges.dart';
 import '../Constants.dart';
 
 import 'package:final_app/Helper/nav_drawer.dart';
@@ -33,18 +35,29 @@ class _MainPageState extends State<MainPage> {
         title: Text("Home"),
         backgroundColor: Colors.redAccent),
     BottomNavigationBarItem(
-        icon: Icon(Icons.shop), title: Text("Shop"), backgroundColor: Colors.redAccent),
+        icon: Icon(Icons.shop),
+        title: Text("Shop"),
+        backgroundColor: Colors.redAccent),
     BottomNavigationBarItem(
         icon: Icon(Icons.person),
         title: Text("Profile"),
         backgroundColor: Colors.redAccent),
   ];
 
+  int count=0;
+
   @override
   void initState() {
     super.initState();
     print("======================== Trending Now Listing ==========");
     CategoriesList.TrendingNowListing();
+    CartApi.cartCount().then((value) {
+      if (value != 0) {
+        setState(() {
+          count = value;
+        });
+      }
+    });
   }
 
   int _currentIndex = 0;
@@ -113,13 +126,14 @@ class _MainPageState extends State<MainPage> {
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
                   child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/Cart');
-                      },
-                      child: Icon(
-                        Icons.shopping_cart,
-                        color: Colors.redAccent,
-                      )),
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/Cart');
+                    },
+                    child: Badge(
+                      badgeContent: Text("$count",style: TextStyle(color: Colors.white),),
+                      child: Icon(Icons.shopping_cart),
+                    ),
+                  ),
                 ),
               )
             ],

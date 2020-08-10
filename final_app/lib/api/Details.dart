@@ -7,7 +7,7 @@ class ProductDetil{
   static Future<Detail> getProductbyId(String id) async {
 
     final response = await http.get(
-    Uri.encodeFull("https://freshodaily.com/api/product-details/1"),
+    Uri.encodeFull("https://freshodaily.com/api/product-details/7"),
     headers: {"Accept": "application/json"});
     var data = jsonDecode(response.body);
     print(data);

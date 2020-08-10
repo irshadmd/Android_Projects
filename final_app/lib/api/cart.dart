@@ -76,7 +76,6 @@ class CartApi{
   }
 
 
-
   static Future<dynamic> deleteCart() async {
     final authtoken = await Preferences.getData("authToken");
     print("===============================");
@@ -91,4 +90,18 @@ class CartApi{
     print(response);
     return response;
   }
+
+   static Future<dynamic> cartCount() async {
+     final authtoken = await Preferences.getData("authToken");
+     final response = await http.get(
+       "https://freshodaily.com/api/cart-count",
+       headers: <String, String>{
+         'Accept': 'application/json',
+         'Authorization': 'Bearer $authtoken',
+       },
+     );
+     var responseJson = jsonDecode(response.body);
+     var data = responseJson["data"];
+     return data;
+   }
 }

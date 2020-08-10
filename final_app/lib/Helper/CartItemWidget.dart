@@ -53,7 +53,7 @@ class _CartItemWidgetState extends State<CartItemWidget> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      height: 70,
+      height: 120,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -109,7 +109,15 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                         maxLines: 1,
                         style: GoogleFonts.raleway(
                           fontSize: 20.0, color: Colors.black
-                        )
+                        ),
+                      ),
+                      Text(
+                        "Price               "+"${widget.cartData.subtotal.toString()}",
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: GoogleFonts.raleway(
+                            fontSize: 20.0, color: Colors.black
+                        ),
                       ),
                     ],
                   ),
